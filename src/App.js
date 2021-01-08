@@ -21,7 +21,7 @@ function App() {
   }
   // bg-gradient-to-bl from-yellow-400 via-pink-500 to-purple-600
   return (
-    <motion.div class="bg-body min-h-screen flex justify-center items-center bg-gradient-to-bl from-yellow-400 via-pink-500 to-purple-600">
+    <motion.div class="bg-body min-h-screen flex justify-center items-center bg-gradient-to-bl from-blue-500 via-yellow-500 to-purple-600">
       <div class="w-full sm:w-full md:w-96 lg:w-96 rounded-none">
 
         <motion.div transition={{ duration: 0.5 }} animate={{ opacity: [0, 1], scale: [1.3, 1] }}>
