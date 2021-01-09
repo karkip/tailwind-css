@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
+import Lottie from 'react-lottie';
+import animation from './assets/lottie.json';
+import React from 'react';
 import './App.css';
 function App() {
+  const [isStopped, setIsStopped] = React.useState(true);
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -17,6 +21,15 @@ function App() {
     hidden: { opacity: 0 },
     show: { opacity: 1, x: [60, 0], transition: { duration: 0.5, ease: "circOut" } }
   }
+
+  const defaultOptions = {
+    loop: false,
+    autoplay: false,
+    animationData: animation,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
   // bg-gradient-to-bl from-yellow-400 via-pink-500 to-purple-600
   return (
     <motion.div class="bg-body min-h-screen flex justify-center items-center bg-gradient-to-bl from-blue-500 via-yellow-500 to-purple-600">
@@ -56,9 +69,11 @@ function App() {
                   <a href="#" class="text-sm text-gray-200 hover:text-purple-700 hover:underline mb-6 transition duration-300">Forgot your password?</a>
                 </motion.div>
                 <motion.div class="flex justify-end w-full">
-                  <motion.button type="submit" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} class="w-full bg-purple-500 text-white font-bold py-2 rounded-2xl shadow-lg outline-none focus:outline-none" style={{ WebkitTapHighlightColor: "rgba(0,0,0,0)" }} onClick={(e) => { e.preventDefault(); }}>Sign In</motion.button>
+                  <motion.button type="submit" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} class="w-full bg-purple-500 text-white font-bold py-2 rounded-2xl shadow-lg outline-none focus:outline-none" style={{ WebkitTapHighlightColor: "rgba(0,0,0,0)" }} onClick={(e) => { e.preventDefault(); setIsStopped(false); }}>Sign In</motion.button>
                 </motion.div>
-
+                <div>
+                  <Lottie options={defaultOptions} height={400} width={400} isStopped={isStopped} />
+                </div>
               </motion.div>
 
             </form>
