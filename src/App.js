@@ -1,7 +1,5 @@
+import { motion } from 'framer-motion';
 import './App.css';
-import { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import Background from './assets/cool-background.png';
 function App() {
   const container = {
     hidden: { opacity: 0 },
