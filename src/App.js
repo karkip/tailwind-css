@@ -32,43 +32,43 @@ function App() {
   };
   // bg-gradient-to-bl from-yellow-400 via-pink-500 to-purple-600
   return (
-    <motion.div class="font-mono bg-body min-h-screen flex justify-center items-center" style={{ "backgroundImage": "linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%)" }}>
+    <motion.div class="font-mono text-white md:text-black bg-body min-h-screen flex justify-center items-center" style={{ "backgroundImage": "linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%)" }}>
       <div class="w-full sm:w-full md:w-96 lg:w-96 rounded-none">
 
         <motion.div transition={{ duration: 0.5 }} animate={{ opacity: [0, 1], scale: [1.3, 1] }}>
           <a href="#">
-            <h1 class="text-4xl font-bold text-white text-center">Startup</h1>
+            <h1 class="text-4xl font-bold text-center text-white">Startup</h1>
           </a>
         </motion.div>
 
 
         <motion.div variants={container}
           initial="hidden"
-          animate="show" class="bg-white bg-opacity-0 md:bg-opacity-20 p-12 my-10 rounded-none md:rounded-xl shadow-none md:shadow-2xl border-white"
+          animate="show" class="bg-white bg-opacity-0 md:bg-opacity-100 md:bg-gray-200 p-12 my-10 rounded-none md:rounded-xl shadow-none md:shadow-2xl border-white"
         >
           <motion.div variants={item} size={50} />
           <motion.div variants={item} size={50}>
-            <motion.h3 class="font-bold text-2xl text-white" variants={item} size={50}>Welcome to Startup</motion.h3>
-            <motion.p class="pt-2 text-white" variants={item} size={50}>Sign in to your account</motion.p>
+            <motion.h3 class="font-bold text-2xl md:text-purple-600" variants={item} size={50}>Welcome to Startup</motion.h3>
+            <motion.p class="pt-2" variants={item} size={50}>Sign in to your account</motion.p>
           </motion.div>
 
 
           <motion.div class="mt-10"  >
             <form class="flex flex-col">
-              <motion.div class="mb-6 pt-3 rounded bg-white bg-opacity-20 shadow-2xl" variants={item} size={50}>
-                <label for="email" class="block text-gray-200 text-sm font-bold mb-2 ml-3">Email</label>
-                <input type="text" id="email" class="bg-opacity-0 bg-gray-100 px-3 rounded w-full outline-none focus:outline-none text-gray-700 border-b-4 border-gray-100 focus:border-gray-500" />
+              <motion.div class="mb-6 pt-3 rounded bg-white bg-opacity-20 md:bg-opacity-100 md:bg-gray-100 shadow-2xl" variants={item} size={50}>
+                <label for="email" class="block text-gray-200 md:text-black text-sm font-bold mb-2 ml-3">Email</label>
+                <input type="text" id="email" class="bg-opacity-0 bg-gray-100 px-3 rounded w-full outline-none focus:outline-none text-gray-700 border-b-4 border-gray-100 focus:border-purple-500" />
               </motion.div>
-              <motion.div class="mb-6 pt-3 rounded bg-white bg-opacity-20 shadow-2xl" variants={item} size={50}>
-                <label for="password" class="block text-gray-200 text-sm font-bold mb-2 ml-3">Password</label>
-                <input type="password" id="password" class="bg-gray-100 bg-opacity-0 px-3 rounded w-full  outline-none focus:outline-none text-gray-700 border-b-4 border-gray-100 focus:border-gray-500" />
+              <motion.div class="mb-6 pt-3 rounded bg-white bg-opacity-20 md:bg-opacity-100 md:bg-gray-100 shadow-2xl" variants={item} size={50}>
+                <label for="password" class="block text-gray-200 md:text-black text-sm font-bold mb-2 ml-3">Password</label>
+                <input type="password" id="password" class="bg-gray-100 bg-opacity-0 px-3 rounded w-full  outline-none focus:outline-none text-gray-700 border-b-4 border-gray-100 focus:border-purple-500" />
               </motion.div>
               <motion.div class="w-full" variants={item}>
                 <motion.div class="flex justify-end">
-                  <a href="#" class="text-sm text-gray-200 hover:text-purple-700 hover:underline mb-6 transition duration-300">Forgot your password?</a>
+                  <a href="#" class="text-sm text-gray-200 md:text-purple-600 hover:text-purple-700 hover:underline mb-6 transition duration-300">Forgot your password?</a>
                 </motion.div>
                 <motion.div class="flex justify-end w-full">
-                  <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} class="w-full bg-pink-600 text-white font-bold py-2 rounded-2xl shadow-lg outline-none focus:outline-none" style={{ WebkitTapHighlightColor: "rgba(0,0,0,0)" }} onClick={(e) => { e.preventDefault(); setIsStopped(false) }}>Sign In</motion.button>
+                  <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} class="w-full bg-purple-500 font-bold py-2 rounded-2xl shadow-lg outline-none focus:outline-none" style={{ WebkitTapHighlightColor: "rgba(0,0,0,0)" }} onClick={(e) => { e.preventDefault(); setIsStopped(false) }}>Sign In</motion.button>
                 </motion.div>
                 <div>
                   <Lottie style={{ position: "absolute", left: 0, right: 0 }} options={defaultOptions} height={400} width={400} isStopped={isStopped} />
@@ -80,7 +80,7 @@ function App() {
         </motion.div>
 
 
-        <motion.div class="text-white text-center mt-12" variants={container}
+        <motion.div class=" text-center mt-12 text-white" variants={container}
           initial="hidden"
           animate="show" >
           <motion.div class="mb-6" variants={item} size={50}>
